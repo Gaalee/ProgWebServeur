@@ -23,9 +23,9 @@ $factory->define(Post::class, function (Faker $faker) {
         'user_id' => rand(1,9),
         'post_date' => now(),
         'post_content' => $faker->text,
-        'post_status' => $faker->text(20),
+        'post_status' => 'open',
         'post_name' => $faker->text(15),
-        'post_type' => $faker->text(20),
-        'post_category' => $faker->text(20),
+        'post_type' => randomElement($array = array ('Tutorial','News','Report')),
+        'post_category' => randomElement($array = array ('Food','Gaming','Sport','Reading')),
     ];
 });

@@ -23,3 +23,5 @@ Route::get('/contact', 'ContactController@index');
 Route::post('contact/confirm', 'ContactController@store');
 
 Route::get('/articles/{post_name}', 'ArticlesController@show');
+
+Route::resource('/admin/articles', 'CRUDArticlesController');

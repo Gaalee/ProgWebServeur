@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 class ArticlesController extends Controller
 {
     function index(){
-        return view('articles');
+        $posts = Post::all();
+
+        return view('articles.index', compact('posts'));
     }
 
     public function show($post_name) {

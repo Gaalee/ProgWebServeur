@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Foundation | Welcome</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<script src="https://kit.fontawesome.com/3cdd8deb39.js" crossorigin="anonymous"></script>
+<link href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >
+
 </head>
 <body>
 
@@ -14,6 +17,9 @@
 <li class="menu-text">Blog</li>
 <li><a href="/">Home</a></li>
 <li><a href="/articles">Articles</a></li>
+<li><a href="{{ route('articles.index')}}">Articles View By Admin</a></li>
+<li><a href="{{ route('articles.create')}}">Add Articles</a></li>
+
 <li><a href="/contact">Contact</a></li>
 </ul>
 </div>
