@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
  <div class="col-sm-8 offset-sm-2">
-    <h1>Add a contact</h1>
+    <h1>Add an Article</h1>
   <div>
     @if ($errors->any())
       <div class="callout alert">

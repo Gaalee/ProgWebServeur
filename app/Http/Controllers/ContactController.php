@@ -3,18 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
     function index(){
-        return view('contact');
+        $contacts = Contact::all();
+
+        return view('contact', compact('contacts'));
     }
 
-    public function store(ContactRequest $request){
-    // The incoming request is valid...
+    public function store(Request $request)
+    {
+        $request->validate([
+            'contact_name'=>'required',
+            'contact_email'=>'required|email',
+            'contact_message'=>'required',
+        ]);
 
-    // Retrieve the validated input data...
-    $validated = $request->validated();
-        // The blog post is valid...
+        $contact = new Contact([
+            'contact_name' => $request->get('contact_name'),
+            'contact_email' => $request->get('contact_email'),
+            'contact_message' => $request->get('contact_message'),
+            'contact_date' => now()
+        ]);
+        $contact->save();
+        return redirect('/contact')->with('success', 'Contact form sent !');
     }
 }

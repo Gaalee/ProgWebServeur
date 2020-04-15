@@ -20,7 +20,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/articles', 'ArticlesController@index');
 
 Route::get('/contact', 'ContactController@index');
-Route::post('contact/confirm', 'ContactController@store');
+Route::post('contact', 'ContactController@store');
 
 Route::get('/articles/{post_name}', 'ArticlesController@show');
 
