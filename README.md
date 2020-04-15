@@ -39,9 +39,13 @@ Aller à l'URL suivante
 
 # Fonctionnalitées
 ### 1. TP2 fonctionnalitées
-    #### 1. Home
-    #### 1. Articles
-    #### 1. Contact
+#### Home  
+Comme l'énnoncé l'a demandé dans le TP2, la page d'accueil comporte la liste des trois premiers articles avec un lien d'accès unique pour chacun d'eux.
+#### Articles
+La page des articles comporte tous les articles avec du style pour les représenter comme tels.
+#### Contact  
+La page de contact comporte un formulaire d'envoi de demande de contact ainsi qu'un tableau regroupant toutes les demandes de contact.
+> **Note:** Toutes ces fonctionnalitées sont utilisables via le menu en haut a gauche une fois l'authentification effectuée.  
 ### 1. Authentification
 ### 1. CRUD
 ### 1. Media pour articles
