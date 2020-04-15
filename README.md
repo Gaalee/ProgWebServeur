@@ -7,8 +7,8 @@ Aller dans le dossier du dépôt cloné
 `cd ProgWebServeur`
 
 Installer les dépendances composer et npm  
-`composer install
-npm install`
+`composer install`  
+`npm install`
 
 Générer la clé de l'application  
 `php artisan key:generate`
@@ -24,7 +24,7 @@ DB_DATABASE=/chemin/vers/l-application/database/database.sqlite
 # DB_DATABASE=larablog
 # DB_USERNAME=root
 # DB_PASSWORD=ic2a
-`
+`  
 Lancer les migrations et les seeds pour remplir la base de données  
 `php artisan migrate:fresh --seed`
 
