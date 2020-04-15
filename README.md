@@ -46,7 +46,7 @@ La page des articles comporte tous les articles avec du style pour les représen
 #### Contact  
 La page de contact comporte un formulaire d'envoi de demande de contact ainsi qu'un tableau regroupant toutes les demandes de contact.
 > **Note:** Toutes ces fonctionnalitées sont utilisables via le menu en haut à gauche une fois l'authentification effectuée.  
-### 1. Authentification
+### 2. Authentification
 Lors de la première visite sur l'application on arrive sur la page d'authentification. À partir de là vous pouvez soit, créer un compte (pour plus de facilité il est possible de créer un utilisateur ou un administrateur), soit vous connecter avec l'un des deux utilisateurs créés de base.  
 Leurs iddentifiants sont : 
 ```
@@ -57,8 +57,8 @@ email : user@user
 mdp : user
 ```
 Une fois connecté vous arriverez sur la page d'accueil du TP2. Utilisez le menu horizontale pour tester toutes les fonctionnalitées de l'application.
-### 1. CRUD
+### 3. CRUD
 Le CRUD est présent pour les articles via les deux menus "Articles View By Admin" et "Add Articles". Ces deux fonctionnalitées ne sont utilisablent qu'en administrateur. Veillez bien a vous connecter sur un compte de ce privilège pour les explorer. Pour une facilité de correction, ces systèmes ne sont pas cachés de l'utilisateur classique mais,si celui-ci essai de les utiliser, alors un message d'erreur s'affichera.  
 En tant qu'administrateur vous pourrez alors tester les boutons d'édition et de suppression se trouvant sur la page "Articles View By Admin".
-### 1. Media pour articles
+### 4. Media pour articles
 La dernière fonctionnalitée rajoutée est la gestion d'ajout d'image attachée aux articles. Celle-ci est gérée via le CRUD également, cela permet de changer ou de supprimer une image d'un article.
