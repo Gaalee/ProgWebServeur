@@ -52,7 +52,7 @@ class CRUDArticlesController extends Controller
         }
 
         $article = new Post([
-            'user_id' => 1,
+            'user_id' => Auth::user()->id,
             'post_date' => now(),
             'post_media' => $new_name,
             'post_content' => $request->get('post_content'),

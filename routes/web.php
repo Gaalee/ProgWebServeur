@@ -24,4 +24,9 @@ Route::post('contact', 'ContactController@store');
 
 Route::get('/articles/{post_name}', 'ArticlesController@show');
 
-Route::resource('/admin/articles', 'CRUDArticlesController');
+Route::resource('/admin/articles', 'CRUDArticlesController')->middleware('is_admin');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

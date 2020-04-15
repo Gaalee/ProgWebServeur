@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -11,8 +12,23 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\User::class, 10)->create()->each(function ($user) {
-            $user->posts()->save(factory(App\Post::class)->create());
-        }); 
+        $user = [
+            [
+               'name'=>'Admin',
+               'email'=>'admin@admin',
+                'is_admin'=>'1',
+               'password'=> bcrypt('admin'),
+            ],
+            [
+               'name'=>'User',
+               'email'=>'user@user',
+                'is_admin'=>'0',
+               'password'=> bcrypt('user'),
+            ],
+        ];
+  
+        foreach ($user as $key => $value) {
+            User::create($value);
+        }
     }
 }

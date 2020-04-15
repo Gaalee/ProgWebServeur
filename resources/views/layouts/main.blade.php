@@ -19,11 +19,27 @@
 <li><a href="/articles">Articles</a></li>
 <li><a href="{{ route('articles.index')}}">Articles View By Admin</a></li>
 <li><a href="{{ route('articles.create')}}">Add Articles</a></li>
-
 <li><a href="/contact">Contact</a></li>
+
+</div>
+
+
+<div class="top-bar-right">
+    <ul class="menu">
+    @guest
+<li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
+ @else
+<li>{{ Auth::user()->name }}</li>
+<li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+ @csrf
+ </form>
+</li>
+@endguest
 </ul>
-</div>
-</div>
+    </ul>
+  </div>
+  </div>
 
 <div class="callout large primary">
 <div class="row column text-center">
