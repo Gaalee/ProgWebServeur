@@ -41,12 +41,20 @@ class CRUDArticlesController extends Controller
             'post_title'=>'required',
             'post_content'=>'required',
             'post_type'=>'required',
-            'post_category'=>'required'
+            'post_category'=>'required',
+            'post_media'=>'image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
+        $new_name ='';
+        if ($request->hasFile('post_media')) {
+            $image = $request->file('post_media');
+            $new_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path("images"), $new_name);
+        }
 
         $article = new Post([
             'user_id' => 1,
             'post_date' => now(),
+            'post_media' => $new_name,
             'post_content' => $request->get('post_content'),
             'post_title' => $request->get('post_title'),
             'post_status' => 'open',
@@ -94,10 +102,19 @@ class CRUDArticlesController extends Controller
             'post_title'=>'required',
             'post_content'=>'required',
             'post_type'=>'required',
-            'post_category'=>'required'
+            'post_category'=>'required',
+            'post_media'=>'image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
+        if ($request->hasFile('post_media')) {
+        $image = $request->file('post_media');
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path("images"), $new_name);
+        }
 
         $article = Post::find($id);
+        if ($request->hasFile('post_media')) {
+        $article->post_media = $new_name;
+        }
         $article->post_content = $request->get('post_content');
         $article->post_title = $request->get('post_title');
         $article->post_status = $request->get('post_status');

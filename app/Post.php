@@ -12,6 +12,7 @@ class Post extends Model
         'post_date',
         'post_content',
         'post_title',
+        'post_media',
         'post_status',
         'post_name',
         'post_type',

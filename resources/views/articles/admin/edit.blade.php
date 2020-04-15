@@ -7,18 +7,20 @@
   <div>
     @if ($errors->any())
       <div class="callout alert">
-        <form method="post" action="{{ route('contacts.update', $contact->id) }}">
             @foreach ($errors->all() as $error)
             <i class="fas fa-exclamation-triangle red" style="color:red;"></i>{{ $error }}<br>
             @endforeach
       
       </div><br />
     @endif
-      <form method="post" action="{{ route('articles.update', $article->id) }}">
+      <form method="post" action="{{ route('articles.update', $article->id) }}" enctype="multipart/form-data">
       @method('PATCH')
       @csrf
               <label for="post_title">Post title :</label>
               <input type="text" name="post_title" value="{{ $article->post_title }}" />
+
+              <label for="post_media">Post Media :</label>
+              <input type="file" name="post_media"/>
 
               <label for="post_content">Post content :</label>
               <input type="text" name="post_content" value="{{ $article->post_content }}"/>

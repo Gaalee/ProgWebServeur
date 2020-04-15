@@ -14,10 +14,13 @@
       
       </div><br />
     @endif
-      <form method="post" action="{{ route('articles.store') }}">
+      <form method="post" action="{{ route('articles.store') }}" enctype="multipart/form-data">
       @csrf
               <label for="post_title">Post title :</label>
               <input type="text" name="post_title"/>
+
+              <label for="post_media">Post Media :</label>
+              <input type="file" name="post_media"/>
 
               <label for="post_content">Post content :</label>
               <input type="text" name="post_content"/>

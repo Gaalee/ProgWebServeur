@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->date('post_date');
             $table->text('post_content');
             $table->text('post_title');
+            $table->string('post_media');
             $table->string('post_status', 20);
             $table->string('post_name', 200);
             $table->string('post_type', 20);

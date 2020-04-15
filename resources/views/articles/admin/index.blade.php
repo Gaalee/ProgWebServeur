@@ -15,7 +15,13 @@
     @csrf
     @method('DELETE')
     <button class="alert button" type="submit">Delete</button>
-    </form></div>
+    </form></div><br>
+    
+    @if($post->post_media == '')
+    <img class=img_article src="https://via.placeholder.com/1500x450">
+    @else
+    <img class=img_article src="{{ asset('images/' . $post->post_media) }}">
+    @endif
     <p><?php echo $post->post_content; ?></p>
     <div class="callout">
     <a href="#">Auteur: <?php echo $post->author->name; ?></a>
