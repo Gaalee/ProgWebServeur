@@ -38,10 +38,10 @@ Aller à l'URL suivante
 
 
 # Fonctionnalitées
-1. ### TP2 fonctionnalitées
-    1. Home
-    1. Articles
-    1. Contact
-1. ### Authentification
-1. ### CRUD
-1. ### Media pour articles
+### 1. TP2 fonctionnalitées
+    #### 1. Home
+    #### 1. Articles
+    #### 1. Contact
+### 1. Authentification
+### 1. CRUD
+### 1. Media pour articles
