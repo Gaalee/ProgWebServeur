@@ -15,7 +15,7 @@ Générer la clé de l'application
 
 Créer un fichier database.sqlite dans le dossier database de l’application  
 Créer le fichier .env à partir du .env.example, puis le modifier pour spécifier l’utilisation de SQLite et le chemine d’accès au fichier: (pensez à remplacer /chemin/vers l-application par le chemin du fichier de votre machine)  
-`
+```
 DB_CONNECTION=sqlite
 DB_DATABASE=/chemin/vers/l-application/database/database.sqlite
 # DB_CONNECTION=mysql
@@ -24,8 +24,7 @@ DB_DATABASE=/chemin/vers/l-application/database/database.sqlite
 # DB_DATABASE=larablog
 # DB_USERNAME=root
 # DB_PASSWORD=ic2a
-`
-
+```
 Lancer les migrations et les seeds pour remplir la base de données  
 `php artisan migrate:fresh --seed`
 
